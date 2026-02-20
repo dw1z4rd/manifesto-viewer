@@ -1,4 +1,6 @@
 <script lang="ts">
+	import '../../app.css';
+	
 	let { data } = $props();
 </script>
 
@@ -6,144 +8,67 @@
 	<title>The Uncertainty Obligation</title>
 </svelte:head>
 
-<div class="container">
-	<article class="prose">
-		{@html data.html}
-	</article>
+<div class="min-h-screen bg-gradient-to-b from-gray-50 to-white py-12 px-4 sm:px-6 lg:px-8">
+	<div class="max-w-4xl mx-auto">
+		<!-- Academic Paper Container -->
+		<article class="bg-white shadow-xl border border-gray-200 px-8 py-12 sm:px-12 sm:py-16">
+			<!-- Content with Academic Styling -->
+			<div class="prose prose-lg prose-slate max-w-none
+				prose-headings:font-serif prose-headings:font-bold
+				prose-h1:text-4xl prose-h1:text-center prose-h1:mb-2 prose-h1:mt-8
+				prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:border-b prose-h2:border-gray-300 prose-h2:pb-2
+				prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3
+				prose-p:text-justify prose-p:leading-relaxed prose-p:mb-4
+				prose-blockquote:border-l-4 prose-blockquote:border-blue-600 prose-blockquote:bg-blue-50 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:my-6 prose-blockquote:not-italic
+				prose-strong:text-gray-900 prose-strong:font-semibold
+				prose-em:italic
+				prose-ul:my-4 prose-ol:my-4
+				prose-li:my-2
+				prose-hr:my-8 prose-hr:border-gray-300
+				prose-img:mx-auto prose-img:my-8 prose-img:shadow-lg
+				prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline">
+				{@html data.html}
+			</div>
+		</article>
+		
+		<!-- Footer Citation Style -->
+		<div class="mt-8 text-center text-sm text-gray-500 font-sans">
+			<p>Document rendered from markdown source</p>
+		</div>
+	</div>
 </div>
 
 <style>
-	:global(body) {
-		margin: 0;
-		padding: 0;
-		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-		line-height: 1.6;
-		color: #333;
-		background: #ffffff;
+	/* Additional custom styles for academic paper look */
+	:global(.prose h1:first-of-type) {
+		margin-top: 0;
 	}
 	
-	.container {
-		max-width: 800px;
-		margin: 0 auto;
-		padding: 2rem 1rem;
+	:global(.prose blockquote p) {
+		margin: 0.25rem 0;
 	}
 	
-	:global(.prose) {
-		font-size: 1.125rem;
-		line-height: 1.75;
+	:global(.prose blockquote > p:first-child::before) {
+		content: none;
 	}
 	
-	:global(.prose h1) {
-		font-size: 2.5rem;
-		font-weight: 700;
-		margin: 2rem 0 1rem;
-		line-height: 1.2;
-		color: #1a1a1a;
+	:global(.prose blockquote > p:last-child::after) {
+		content: none;
 	}
 	
-	:global(.prose h2) {
-		font-size: 2rem;
-		font-weight: 600;
-		margin: 2rem 0 1rem;
-		line-height: 1.3;
-		color: #1a1a1a;
-	}
-	
-	:global(.prose h3) {
-		font-size: 1.5rem;
-		font-weight: 600;
-		margin: 1.5rem 0 0.75rem;
-		color: #2a2a2a;
-	}
-	
-	:global(.prose p) {
-		margin: 1rem 0;
-		line-height: 1.75;
-	}
-	
-	:global(.prose blockquote) {
-		border-left: 4px solid #3b82f6;
-		padding-left: 1.5rem;
-		margin: 1.5rem 0;
-		font-style: italic;
-		color: #555;
-	}
-	
-	:global(.prose blockquote > p) {
-		margin: 0.5rem 0;
-	}
-	
-	:global(.prose hr) {
-		border: none;
-		border-top: 2px solid #e5e7eb;
-		margin: 3rem 0;
-	}
-	
-	:global(.prose strong) {
-		font-weight: 700;
-		color: #1a1a1a;
-	}
-	
-	:global(.prose em) {
-		font-style: italic;
-	}
-	
-	:global(.prose ul, .prose ol) {
-		margin: 1rem 0;
-		padding-left: 2rem;
-	}
-	
-	:global(.prose li) {
-		margin: 0.5rem 0;
-	}
-	
-	:global(.prose img) {
-		max-width: 100%;
-		height: auto;
-		margin: 2rem 0;
-		display: block;
-	}
-	
-	:global(.prose code) {
-		background: #f3f4f6;
-		padding: 0.2rem 0.4rem;
-		border-radius: 0.25rem;
-		font-size: 0.9em;
-		font-family: 'Courier New', monospace;
-	}
-	
-	:global(.prose pre) {
-		background: #f3f4f6;
-		padding: 1rem;
-		border-radius: 0.5rem;
-		overflow-x: auto;
-		margin: 1.5rem 0;
-	}
-	
-	:global(.prose pre code) {
-		background: none;
-		padding: 0;
-	}
-	
-	@media (max-width: 640px) {
-		.container {
-			padding: 1rem 0.75rem;
+	/* Print styles for actual paper printing */
+	@media print {
+		:global(body) {
+			background: white;
 		}
 		
-		:global(.prose) {
-			font-size: 1rem;
+		.bg-gradient-to-b {
+			background: white;
 		}
 		
-		:global(.prose h1) {
-			font-size: 1.875rem;
-		}
-		
-		:global(.prose h2) {
-			font-size: 1.5rem;
-		}
-		
-		:global(.prose h3) {
-			font-size: 1.25rem;
+		article {
+			box-shadow: none;
+			border: none;
 		}
 	}
 </style>
