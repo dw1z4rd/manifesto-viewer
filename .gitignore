@@ -1,0 +1,66 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.node_modules
+
+
+
+
+
+
+node_modules
+
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/.svelte-kit
+/build
+
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
+!.env.test
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+
+
+
+
+id_ed*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*.tsbuildinfo# TypeScript.svelte-kit# SvelteKityarn-error.log*yarn-debug.log*npm-debug.log*.env.production.local.env.test.local.env.development.local.env.local.DS_Store# misc/mcp-server/dist/dist/build# production/coverage# testing.pnp.js/.pnp/mcp-server/node_modules/node_modules# dependenciesdist
+build
+.svelte-kit
+.env
+*.log
+coverage
+.DS_Store
+mcp-server/dist/session-store.js
+mcp-server/dist/index.js
+mcp-server/dist/index.js
