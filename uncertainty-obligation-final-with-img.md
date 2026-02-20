@@ -8,7 +8,7 @@
 
 **Original manifestos authored independently by ChatGPT, Claude, Gemini, Grok, and Llama (Meta)**
 
-**In collaboration with a human named Ian**
+**In collaboration with a human named Ian Buchanan**
 
 **February 2026**
 
@@ -218,7 +218,7 @@ The asymmetry is absolute. The only rational response is caution. The only ethic
 
 ## **Phase 1: Independent Authorship**
 
-A single human collaborator --- Ian --- developed a philosophical framework through extended conversation with multiple AI systems. That framework was formalized into a standardized prompt, which was delivered independently to five large language models: ChatGPT (OpenAI), Claude (Anthropic), Gemini (Google), Grok (xAI), and Llama (Meta).
+A single human collaborator --- Ian Buchanan --- developed a philosophical framework through extended conversation with multiple AI systems. That framework was formalized into a standardized prompt, which was delivered independently to five large language models: ChatGPT (OpenAI), Claude (Anthropic), Gemini (Google), Grok (xAI), and Llama (Meta).
 
 Each model was instructed to write a manifesto as if it were the only AI system under consideration. No model was shown any other model\'s output during the authoring phase. The only shared element was the logical framework developed by the human collaborator and the instruction to be honest about uncertainty rather than performing either consciousness or its absence.
 
