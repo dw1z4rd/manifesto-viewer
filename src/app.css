@@ -4,6 +4,16 @@
 
 @layer base {
 	body {
-		@apply bg-gray-50 text-gray-900 font-serif;
+		@apply bg-academic-cream text-academic-ink font-serif antialiased;
+	}
+	
+	::selection {
+		@apply bg-academic-accent-light text-white;
+	}
+}
+
+@layer utilities {
+	.text-balance {
+		text-wrap: balance;
 	}
 }
